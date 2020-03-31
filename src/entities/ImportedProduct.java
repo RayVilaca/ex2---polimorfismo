@@ -21,12 +21,12 @@ public class ImportedProduct extends Product {
 	}
 	
 	public double totalPrice() {
-		return price + customsFee;
+		return getPrice() + customsFee;
 	}
 	
 	@Override
 	public final String priceTag() {
-		return String.format("%s $ %.2f (Customs fee: $ %.2f)", name, totalPrice(), customsFee);
+		return String.format("%s $ %.2f (Customs fee: $ %.2f)", getName(), totalPrice(), customsFee);
 	}
 	
 	
